@@ -1,0 +1,36 @@
+class Estudiante:
+    def __init__(self, nombre, edad, calificacion):
+        self.nombre = nombre
+        self.edad = edad
+        self.calificacion = calificacion
+
+# Aqui se calcula si aprueba o reprueba    
+    def calcular_aprobacion(self):
+        if self.calificacion >= 3:
+            return "Aprobado"
+        else:
+            return "Reprobado"
+
+# Aqui se Muestran los nombre, y si aprobo o reprobo  
+    def mostrar_informacion(self):
+        print("=" * 30)
+        print("INFORMACIÓN DEL ESTUDIANTE")
+        print("=" * 30)
+        print(f"Nombre: {self.nombre}")
+        print(f"Edad: {self.edad}")
+        print(f"Calificación: {self.calificacion}")
+        print(f"Estado: {self.calcular_aprobacion()}")
+        print("=" * 30)
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    # Registro de estudiantes
+    estudiante1 = Estudiante("Juan Pérez", 20, 2.5)
+    estudiante2 = Estudiante("María López", 19, 4.5)
+    estudiante3 = Estudiante("Alberto Perez", 29, 2.9)
+    
+    # Mostrar información de los estudiantes
+    estudiante1.mostrar_informacion()
+    estudiante2.mostrar_informacion()
+    estudiante3.mostrar_informacion()
+        
